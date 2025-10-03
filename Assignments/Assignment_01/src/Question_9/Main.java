@@ -34,10 +34,23 @@ Write a test program that creates an Account object with an account ID of 1122, 
  */
 package Question_9;
 
-public class Main
-{
-    public static void main(String[] args)
-    {
+public class Main {
+    public static void main(String[] args) {
+        Account account_1 = new Account(1122, 20000);
+        account_1.setAnnualInterestRate(4.5);
+        account_1.withdraw(2500);
+        account_1.deposit(3000);
 
+        printAccountDetails(account_1);
+    }
+
+    public static void printAccountDetails(Account account)
+    {
+        System.out.println("---------------------");
+        System.out.println("Account Details: ");
+        System.out.println("Balance: " + account.getBalance());
+        System.out.println("Monthly Interest: " + account.getMonthlyInterest());
+        System.out.println("Date created: " +  account.getDateCreated());
+        System.out.println("---------------------");
     }
 }

@@ -11,27 +11,28 @@ class Account
     private Date dateCreated;
 
     // constructors
-    public Account() {}
+    public Account() { dateCreated = new Date(); }
     public Account(int id, double balance)
     {
         this.id = id;
         this.balance = balance;
+        dateCreated = new Date();
     }
 
     // getters
     public int getId() { return id; }
     public double getBalance() { return balance; }
-    public double getAnnualInterestRate() { return annualInterestRate; }
+    public static double getAnnualInterestRate() { return annualInterestRate; }
     public Date  getDateCreated() { return dateCreated; }
 
     // setters
     public void setId(int id) { this.id = id; }
     public void setBalance(double balance) { this.balance = balance; }
-    public void setAnnualInterestRate(double annualInterestRate) { this.annualInterestRate = annualInterestRate; }
+    public static void setAnnualInterestRate(double annualInterestRate) { Account.annualInterestRate = annualInterestRate; }
 
     // methods
-    public double getMonthlyInterestRate() { return annualInterestRate / 12; }
+    public double getMonthlyInterestRate() { return (annualInterestRate/100) / 12; }
     public double getMonthlyInterest() { return balance * getMonthlyInterestRate(); }
-    public void withdraw(double withdrawalAmount) { balance -= withdrawalAmount; }
-    public void deposit(double depositAmount) { balance += depositAmount; }
+    public void withdraw(double withdrawalAmount) { if (withdrawalAmount <= balance) balance -= withdrawalAmount; }
+    public void deposit(double depositAmount) { if (depositAmount > 0) balance += depositAmount; }
 }
