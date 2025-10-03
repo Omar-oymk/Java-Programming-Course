@@ -30,4 +30,8 @@ class Account
     public void setAnnualInterestRate(double annualInterestRate) { this.annualInterestRate = annualInterestRate; }
 
     // methods
+    public double getMonthlyInterestRate() { return annualInterestRate / 12; }
+    public double getMonthlyInterest() { return balance * getMonthlyInterestRate(); }
+    public void withdraw(double withdrawalAmount) { balance -= withdrawalAmount; }
+    public void deposit(double depositAmount) { balance += depositAmount; }
 }
