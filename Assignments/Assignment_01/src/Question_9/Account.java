@@ -8,15 +8,15 @@ class Account
     private int id;
     private double balance;
     private static double annualInterestRate;
-    private Date dateCreated;
+    private final Date dateCreated;     // final because it only indicates when the acc was created
 
     // constructors
     public Account() { dateCreated = new Date(); }
     public Account(int id, double balance)
     {
+        this();
         this.id = id;
         this.balance = balance;
-        dateCreated = new Date();
     }
 
     // getters
