@@ -23,7 +23,7 @@ class Account
     public int getId() { return id; }
     public double getBalance() { return balance; }
     public static double getAnnualInterestRate() { return annualInterestRate; }
-    public Date  getDateCreated() { return dateCreated; }
+    public Date getDateCreated() { return dateCreated; }
 
     // setters
     public void setId(int id) { this.id = id; }
