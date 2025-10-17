@@ -1,6 +1,6 @@
 package Question_5;
 
-public class MyInteger
+class MyInteger
 {
     // ATTRIBUTES
     private final int value;
