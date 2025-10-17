@@ -24,6 +24,9 @@ public class MyInteger
         }
         return count < 2;
     }
+
+    public boolean equals(int x) { return value == x; }
+    public boolean equals(MyInteger x) { return value == x.getValue(); }
     //endregion
     //region STATIC-CHECKERS
 
@@ -53,4 +56,5 @@ public class MyInteger
         return count < 2;
     }
     //endregion
+
 }
