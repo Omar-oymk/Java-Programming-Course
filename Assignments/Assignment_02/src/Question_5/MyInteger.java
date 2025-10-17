@@ -26,6 +26,8 @@ public class MyInteger
     }
     //endregion
     //region STATIC-CHECKERS
+
+    // THESE TAKE CONSTANT VARIABLE (primitive datatype)
     public static boolean isEven(int value) { return value %2 == 0; }
     public static boolean isOdd(int value) { return value %2 != 0; }
     public static boolean isPrime(int value)
@@ -37,6 +39,18 @@ public class MyInteger
         }
         return count < 2;
     }
+
+    // THESE TAKE AN OBJECT OF THE CLASS MyInteger (non-primitive datatype)
+    public static boolean isEven(MyInteger value) { return value.getValue() % 2 == 0; }
+    public static boolean isOdd(MyInteger value) { return value.getValue() % 2 != 0; }
+    public static boolean isPrime(MyInteger value)
+    {
+        int count = 0;
+        for(int i = 1; i < value.getValue(); i++)
+        {
+            if(value.getValue()%i == 0) count++;
+        }
+        return count < 2;
+    }
     //endregion
-    
 }
