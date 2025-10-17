@@ -26,5 +26,17 @@ public class MyInteger
     }
     //endregion
     //region STATIC-CHECKERS
+    public static boolean isEven(int value) { return value %2 == 0; }
+    public static boolean isOdd(int value) { return value %2 != 0; }
+    public static boolean isPrime(int value)
+    {
+        int count = 0;
+        for(int i = 1; i < value; i++)
+        {
+            if(value%i == 0) count++;
+        }
+        return count < 2;
+    }
     //endregion
+    
 }
