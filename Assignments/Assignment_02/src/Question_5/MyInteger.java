@@ -18,11 +18,11 @@ class MyInteger
     public boolean isPrime()
     {
         int count = 0;
-        for(int i = 1; i < value; i++)
+        for(int i = 1; i <= value; i++)
         {
             if(value%i == 0) count++;
         }
-        return count < 2;
+        return count == 2;
     }
 
     public boolean equals(int x) { return value == x; }
@@ -36,11 +36,11 @@ class MyInteger
     public static boolean isPrime(int value)
     {
         int count = 0;
-        for(int i = 1; i < value; i++)
+        for(int i = 1; i <= value; i++)
         {
             if(value%i == 0) count++;
         }
-        return count < 2;
+        return count == 2;
     }
 
     // THESE TAKE AN OBJECT OF THE CLASS MyInteger (non-primitive datatype)
@@ -49,11 +49,11 @@ class MyInteger
     public static boolean isPrime(MyInteger value)
     {
         int count = 0;
-        for(int i = 1; i < value.getValue(); i++)
+        for(int i = 1; i <= value.getValue(); i++)
         {
             if(value.getValue()%i == 0) count++;
         }
-        return count < 2;
+        return count == 2;
     }
     //endregion
 
