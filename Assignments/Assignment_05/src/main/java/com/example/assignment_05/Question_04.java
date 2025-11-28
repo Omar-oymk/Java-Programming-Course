@@ -22,7 +22,7 @@ public class Question_04 extends Application
         // we will draw in a circle of radius 100 and its center will be (200, 200)
         // to get degree at which we will draw the angle
         // 2*pi = full 360 degree
-        // we want to divide the characters equally across this angles so
+        // we want to divide the characters equally across these angles so
         // 1st character will be 2pi/total number of characters * 1
         // 2nd character will be at 2pi/total number of characters * 2
         // and so on...
