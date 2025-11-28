@@ -28,7 +28,7 @@ public class Question_04 extends Application
         // and so on...
         // as for the rotation we know how to rotate by inspecting the tangent at each letter
         // where tangent is always ofc perpendicular to the radius so theta + 90
-        
+
         int centerX = 150;
         int centerY = 150;
         int r = 100;
