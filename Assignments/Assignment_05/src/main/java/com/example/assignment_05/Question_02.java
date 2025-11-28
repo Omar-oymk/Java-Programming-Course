@@ -62,7 +62,7 @@ public class Question_02 extends Application
 
         Scene scene = new  Scene(grid);
         primaryStage.setScene(scene);
-        primaryStage.resizableProperty().setValue(false);
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 }
