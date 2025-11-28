@@ -6,10 +6,16 @@ import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+
+/*
+    my approach will be to make a hbox having multiple vboxes where each have a rectangle and the label
+    and set padding to be bottom
+ */
 
 public class Question_05 extends Application
 {
@@ -24,9 +30,13 @@ public class Question_05 extends Application
         Text text4 = new Text("Final -- 40%");
 
         Rectangle rect1 = new Rectangle(100, 200);
+        rect1.setFill(Color.RED);
         Rectangle rect2 = new Rectangle(100, 100);
+        rect2.setFill(Color.BLUE);
         Rectangle rect3 = new Rectangle(100, 300);
+        rect3.setFill(Color.GREEN);
         Rectangle rect4 = new Rectangle(100, 400);
+        rect4.setFill(Color.ORANGE);
 
         VBox project = new VBox(10);
         project.setAlignment(Pos.BOTTOM_CENTER);
